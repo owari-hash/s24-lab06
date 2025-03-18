@@ -51,7 +51,7 @@ public class DelegationSortedIntList implements IntegerList {
         return sortedIntList.size();
     }
 
-    public int GetTotalAdded() {
+    public int getTotalAdded() {
         return totalAdded;
     }
 }

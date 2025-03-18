@@ -30,7 +30,7 @@ public class InheritanceSortedIntList extends SortedIntList {
         return addedCount > 0;
     }
 
-    public int GetTotalAdded() {
+    public int getTotalAdded() {
         return totalAdded;
     }
 }

@@ -31,7 +31,7 @@ public class Main {
         list1.add(2);
 
         printList(list1);
-        System.out.println(list1.GetTotalAdded());
+        System.out.println(list1.getTotalAdded());
 
         // add 2 elements to a second list.
         list2.add(3);
@@ -41,7 +41,7 @@ public class Main {
         list2.addAll(list1);
 
         printList(list2);
-        System.out.println(list2.GetTotalAdded());
+        System.out.println(list2.getTotalAdded());
     }
 
     /**

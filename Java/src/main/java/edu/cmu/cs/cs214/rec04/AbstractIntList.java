@@ -70,6 +70,6 @@ public abstract class AbstractIntList implements IntegerList {
      */
     public abstract int size();
 
-    public abstract int GetTotalAdded();
+    public abstract int getTotalAdded();
 
 }

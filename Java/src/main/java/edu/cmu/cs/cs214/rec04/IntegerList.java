@@ -59,6 +59,6 @@ public interface IntegerList {
      */
     public int size();
 
-    public int GetTotalAdded();
+    public int getTotalAdded();
 
 }
