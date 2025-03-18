@@ -6,11 +6,52 @@ package edu.cmu.cs.cs214.rec04;
  * with the current size, which goes down when an element is removed)
  * and exports an accessor (totalAdded) for this count.
  *
- * @author Nora Shoemaker
+ * @autor Nora Shoemaker
  *
  */
+public class DelegationSortedIntList implements IntegerList {
+    private SortedIntList sortedIntList = new SortedIntList();
+    private int totalAdded = 0;
 
-public class DelegationSortedIntList {
-    // Write your implementation below with API documentation
+    @Override
+    public boolean add(int num) {
+        totalAdded++;
+        return sortedIntList.add(num);
+    }
 
+    @Override
+    public boolean addAll(IntegerList list) {
+        int addedCount = 0; // Track how many elements are actually added
+        for (int i = 0; i < list.size(); i++) {
+            if (sortedIntList.add(list.get(i))) { // Only count elements that are successfully added
+                addedCount++;
+            }
+        }
+        totalAdded += addedCount; // Increment totalAdded only for new additions
+        return addedCount > 0;
+    }
+
+    @Override
+    public int get(int index) {
+        return sortedIntList.get(index);
+    }
+
+    @Override
+    public boolean remove(int num) {
+        return sortedIntList.remove(num);
+    }
+
+    @Override
+    public boolean removeAll(IntegerList list) {
+        return sortedIntList.removeAll(list);
+    }
+
+    @Override
+    public int size() {
+        return sortedIntList.size();
+    }
+
+    public int GetTotalAdded() {
+        return totalAdded;
+    }
 }

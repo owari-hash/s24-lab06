@@ -28,8 +28,7 @@ public abstract class AbstractIntList implements IntegerList {
 
         boolean success = false;
 
-        for (int i = 0; i < list.size(); i++)
-        {
+        for (int i = 0; i < list.size(); i++) {
             success |= this.add(list.get(i));
         }
 
@@ -58,7 +57,7 @@ public abstract class AbstractIntList implements IntegerList {
      * specified IntegerList.
      *
      * @param list IntegerList containing elements to be removed from
-     * the list
+     *             the list
      * @return true if the list changed as a result of the call
      */
     public abstract boolean removeAll(IntegerList list);
@@ -70,5 +69,7 @@ public abstract class AbstractIntList implements IntegerList {
      * @return number of elements in the list
      */
     public abstract int size();
+
+    public abstract int GetTotalAdded();
 
 }

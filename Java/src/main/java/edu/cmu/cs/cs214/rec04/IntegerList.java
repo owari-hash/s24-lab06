@@ -46,7 +46,7 @@ public interface IntegerList {
      * specified IntegerList.
      *
      * @param list IntegerList containing elements to be removed from
-     * the list
+     *             the list
      * @return true if the list changed as a result of the call
      */
     public boolean removeAll(IntegerList list);
@@ -59,5 +59,6 @@ public interface IntegerList {
      */
     public int size();
 
+    public int GetTotalAdded();
 
 }
